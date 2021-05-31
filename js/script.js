@@ -12,17 +12,22 @@ for (var i = 0; i < vettoreEmail.length; i++) {
 if (check) {
     document.getElementById("login").innerHTML = "login effettuato"
     
-} else {
+}else {
     document.getElementById("login").innerHTML = "login non effettuato email errata"
 }
 
 // gioco dei dadi ------------------
-var dadoPc = Math.random(1,5)
-var dadoUtente = Math.random(1,5)
+var dadoPc = Math.floor(Math.random() * 6) + 1;
+var dadoUtente = Math.floor(Math.random() * 6) + 1;
+
+var output = document.getElementById("result");
 
 if (dadoUtente > dadoPc) {
-    alert("HAI VINTOOOOOOOOOOO")
-} else {
-    alert("hai perso")
+    output.innerHTML = "HAI VINTOOOOOOO!"+ dadoPc + "---dadi---" + dadoUtente;
+}else if(dadoUtente = dadoPc ){
+    output.innerHTML = "Mi dispiace siamo pari!"+ dadoPc + "---dadi---" + dadoUtente;
+}else {
+    output.innerHTML = "Hai persoooooo!" + dadoPc + "---dadi---" + dadoUtente;
+    
 }
 
