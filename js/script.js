@@ -24,14 +24,16 @@ var dadoUtente = Math.floor(Math.random() * 6) + 1;
 
 var output = document.getElementById("result");
 
-if (dadoUtente > dadoPc) {
-    output.innerHTML += "HAI VINTOOOOOOO!" +  "-----"  +  dadoPc + "---dadi---" + dadoUtente;
+output.innerHTML += "User:" + dadoUtente + "</br> Computer:" + dadoPc;
 
-}else if(dadoUtente = dadoPc ){
-    output.innerHTML += "Mi dispiace siamo pari!" +  "-----" + dadoPc + "---dadi---" + dadoUtente;
+if (dadoUtente > dadoPc) {
+    output.innerHTML += "</br> HAI VINTOOOOOOO!";
+
+}else if(dadoUtente < dadoPc ){
+    output.innerHTML += "</br> Hai persoooooo!";
 
 }else {
-    output.innerHTML += "Hai persoooooo!" +  "-----"  + dadoPc + "---dadi---" + dadoUtente;
-    
+    output.innerHTML += "</br> Siamo pari!";
+
 }
 
